@@ -1,7 +1,7 @@
 {
   "name": "bun-plugin-http-imports",
   "license": "MIT",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "strawhat-dev",
   "description": "Bun plugin for resolving http url imports",
   "repository": "github:strawhat-dev/bun-plugin-http-imports",
@@ -9,7 +9,11 @@
   "module": "./src/index.js",
   "exports": "./src/index.js",
   "types": "./src/index.d.ts",
-  "files": ["src", "index.ts", "global.d.ts"],
+  "files": [
+    "src",
+    "index.ts",
+    "global.d.ts"
+  ],
   "scripts": {
     "test": "bun --preload=. test"
   },
