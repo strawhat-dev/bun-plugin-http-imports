@@ -6,16 +6,16 @@
   "description": "Bun plugin for resolving http url imports",
   "repository": "github:strawhat-dev/bun-plugin-http-imports",
   "type": "module",
-  "module": "./src/index.js",
-  "exports": "./src/index.js",
-  "types": "./src/index.d.ts",
-  "files": [
-    "src",
-    "index.ts",
-    "global.d.ts"
-  ],
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./global.d.ts",
+  "files": ["*.js", "*.d.ts"],
+  "exports": {
+    ".": { "import": "./index.js", "types": "./global.d.ts" },
+    "./plugin": { "import": "./plugin.js", "types": "./plugin.d.ts" }
+  },
   "scripts": {
-    "test": "bun --preload=. test"
+    "test": "bun test"
   },
   "optionalDependencies": {
     "linkedom": "^0.18.3"
